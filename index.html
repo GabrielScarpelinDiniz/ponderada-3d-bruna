@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exposição de Carros 3D</title>
+    <style>
+        body { 
+            margin: 0; 
+            padding: 0; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #222;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        
+        .title {
+            margin: 20px 0;
+        }
+        
+        #canvas-container {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .controls {
+            margin-top: 20px;
+            padding: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            background-color: rgba(20, 20, 30, 0.7);
+            border-radius: 10px;
+            max-width: 800px;
+        }
+        
+        button {
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none;
+            background-color: #ff4422;
+            color: white;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        button:hover {
+            background-color: #ff6644;
+        }
+        
+        .color-control {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .description {
+            margin: 20px;
+            max-width: 800px;
+            line-height: 1.5;
+            text-align: center;
+        }
+    </style>
+    <!-- p5.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.min.js"></script>
+</head>
+<body>
+    <h1 class="title">Exposição de Carros 3D</h1>
+    
+    <div id="canvas-container"></div>
+    
+    <div class="controls">
+        <button id="toggle-rotation">Pausar Rotação</button>
+        <div class="color-control">
+            <label for="nebula-color">Cor do Carro:</label>
+            <input type="color" id="nebula-color" value="#ff0000">
+        </div>
+    </div>
+    
+    <!-- Our custom script -->
+    <script src="js/car-viewer.js"></script>
+</body>
+</html>
